@@ -1,6 +1,6 @@
 # CL-Detection 2023 Challenge Baseline Model
 
-This repository provides a solution based on coordinate prediction for the CL-Detection 2023 Challenge.
+This repository provides a solution based on heatmap prediction for the CL-Detection 2023 Challenge.
 Additionally, the repository includes a tutorial on packaging the solution as a Docker image,
 ensuring that participants can upload their algorithm models for validation on the leaderboard.
 
