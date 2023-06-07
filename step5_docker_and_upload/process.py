@@ -28,7 +28,8 @@ class Cldetection_alg_2023(DetectionAlgorithm):
         # 使用对应的GPU
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-        # 加载自己的模型和权重文件
+        # 加载自己的模型和权重文件，这里的权重文件路径是 /opt/algorithm/best_model.pt，
+        # 这是因为在docker中会将当前目录挂载为 /opt/algorithm/，所以你要访问当前文件夹的任何文件，在代码中的路径都应该是 /opt/algorithm/
         self.model = load_model(model_name='UNet')
         model_weight_path = '/opt/algorithm/best_model.pt'
         self.model.load_state_dict(torch.load(model_weight_path))
@@ -42,7 +43,7 @@ class Cldetection_alg_2023(DetectionAlgorithm):
         """TODO: 重写父类函数，根据自己的 predict() 函数返回类型，将结果保存在 self._output_file 中"""
 
         # 因为我们就只传入了一个文件名，则 self._case_results 列表中只有一个元素，我们仅需要取出来进行解码
-        # 这个 predict_result 就是 predict() 函数的返回值
+        # 这个 all_images_predict_landmarks_list 就是 predict() 函数的返回值
         all_images_predict_landmarks_list = self._case_results[0]
 
         # 将预测结果调整为挑战赛需要的JSON格式，借助字典的形式作为中间类型
