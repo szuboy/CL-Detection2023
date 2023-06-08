@@ -57,6 +57,11 @@ class Cldetection_alg_2023(DetectionAlgorithm):
                 all_predict_points_list.append(points)
         json_dict['points'] = all_predict_points_list
 
+        # 提交的版本信息，可以为自己的提交备注不同的版本记录
+        major = 1
+        minor = 0
+        json_dict['version'] = {'major': major, 'minor': minor}
+
         # 转为JSON接受的字符串形式
         json_string = json.dumps(json_dict, indent=4)
         with open(str(self._output_file), "w") as f:

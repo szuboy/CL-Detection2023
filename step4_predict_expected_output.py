@@ -85,6 +85,11 @@ def main(config):
             all_predict_points_list.append(points)
     json_dict['points'] = all_predict_points_list
 
+    # version information
+    major = 1
+    minor = 0
+    json_dict['version'] = {'major': major, 'minor': minor}
+
     # JSON dict to JSON string
     json_string = json.dumps(json_dict, indent=4)
     with open(config.save_json_path, "w") as f:
