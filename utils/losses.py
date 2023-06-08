@@ -6,6 +6,10 @@ import torch.nn as nn
 
 
 def focal_loss(predict, target):
+
+    # clip predict heatmap range to prevent loss from becoming nan | 由于log2操作，限制热图预测值范围，防止loss NAN
+    predict = torch.clamp(predict, min=1e-4, max=1-1e-4)
+
     pos_inds = target.gt(0.9)
     neg_inds = target.lt(0.9)
     neg_weights = torch.pow(1 - target[neg_inds], 4)
