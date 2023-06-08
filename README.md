@@ -13,18 +13,15 @@ It contains detailed code comments for easy understanding and usage 🍚🍚🍚
 
 ## Pipline of This Solution
 
-The baseline solution provided in this repository is based on a paper published in the MICCAI conference in 2016
-titled "Regressing Heatmaps for Multiple Landmark Localization Using CNNs".
-You can find the paper [here](https://link.springer.com/chapter/10.1007/978-3-319-46723-8_27).
-
+The baseline solution provided in this repository is based on a paper published in the 2016 MICCAI conference:
+[Regressing Heatmaps for Multiple Landmark Localization Using CNNs](https://link.springer.com/chapter/10.1007/978-3-319-46723-8_27).
 The overall process of the designed approach is illustrated in the following diagram:
 
 <img alt="avatar" src="docs/workflow.png"/>
 
 In the implementation provided in this repository, a `UNet` model is used as the backbone network for heatmap regression.
-The model takes input images of size `512×512` and outputs heatmaps with 38 channels.
-The predicted coordinates of the landmarks are obtained by taking the coordinates of the maximum value in each heatmap,
-resulting in predictions for 38 landmarks.
+The model takes input images of size 512×512 and outputs heatmaps with 38 channels.
+The predicted coordinates of the landmarks are obtained by taking the coordinates of the maximum value in each heatmap.
 
 
 ## Reproducing the Experiment Results
@@ -35,6 +32,7 @@ Please remember to copy the downloaded weights to the `step5_docker_and_upload` 
 
 Weight files download link: 
 [[Google Drive](https://drive.google.com/file/d/1Qvnym4oGSG903ti0z2HE6Dm1udNO692G/view?usp=sharing)]
+[[Baidu Drive](https://pan.baidu.com/s/1CW6I5ZRq99sYaBqABwa8Sw)]
 
 
 ## How to run this code on the CL-Detection 2023 dataset or your own custom dataset?

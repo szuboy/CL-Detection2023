@@ -14,8 +14,9 @@
 
 <img alt="avatar" src="docs/workflow.png"/>
 
-这项研究探索了深度卷积神经网络在医学图像数据中进行多个关键点定位的适用性。其核心思想是通过将关键点坐标预测任务视为对应的热图回归任务，对每一个关键点都构建了一个高斯热图进行训练。
+该研究的核心思想是通过将关键点坐标预测任务视为对应的热图回归任务，对每一个关键点都构建了一个高斯热图进行训练。
 在这个仓库的实现上，我们简单地采用`UNet`模型作为热图回归的骨干网络，输入`512×512`大小的图像，输出38个通道的热图，最终以热图的最大值坐标作为关键点的坐标，得到38个关键点的预测。
+
 
 ## 复现实验结果
 
@@ -23,6 +24,7 @@
 还请别忘记了把下载好的权重拷贝一份到`step5_docker_and_upload`文件中，给模型预测进行调用。
 
 权重文件下载：[[Google Drive](https://drive.google.com/file/d/1Qvnym4oGSG903ti0z2HE6Dm1udNO692G/view?usp=sharing)]
+[[Baidu Drive](https://pan.baidu.com/s/1CW6I5ZRq99sYaBqABwa8Sw)]
 
 
 ## 如何在CL-Detection 2023数据集上运行此代码呢？
