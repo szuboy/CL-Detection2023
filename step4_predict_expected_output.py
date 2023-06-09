@@ -27,7 +27,7 @@ def main(config):
 
     # load model
     model = load_model(model_name=config.model_name)
-    model.load_state_dict(torch.load(config.load_weight_path))
+    model.load_state_dict(torch.load(config.load_weight_path, map_location=device))
     model = model.to(device)
 
     # load test.csv

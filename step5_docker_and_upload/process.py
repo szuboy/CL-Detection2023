@@ -32,7 +32,7 @@ class Cldetection_alg_2023(DetectionAlgorithm):
         # 这是因为在docker中会将当前目录挂载为 /opt/algorithm/，所以你要访问当前文件夹的任何文件，在代码中的路径都应该是 /opt/algorithm/
         self.model = load_model(model_name='UNet')
         model_weight_path = '/opt/algorithm/best_model.pt'
-        self.model.load_state_dict(torch.load(model_weight_path))
+        self.model.load_state_dict(torch.load(model_weight_path, map_location=self.device))
         self.model.to(self.device)
 
         print("==> Using ", self.device)

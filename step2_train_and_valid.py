@@ -49,7 +49,6 @@ def main(config):
 
     # load model
     model = load_model(model_name=config.model_name)
-    model.load_state_dict(torch.load('/data/zhangHY/CL-Detection2023/UNet_checkpoint/best_model.pt'))
     model = model.to(device)
 
     # optimizer and StepLR scheduler
