@@ -49,6 +49,9 @@
  - `torch` =＝1.12.0
  - `torchvision` == 0.13.0
 
+放心吧，仓库代码并没有特别的库依赖，只要在您的电脑上，可以导入`torch` 和`torchvision`，然后将相关的依赖安装上，相信环境问题不会存在。
+如果有，也还请 [Issues](https://github.com/szuboy/CL-Detection2023/issues) 中提出来，我一定耐心地回复您的疑问直到解决问题。
+
 
 ### Step1：数据预处理
 
@@ -220,4 +223,4 @@ python step4_predict_expected_output.py \
 - 该基线代码采用的是`L1`损失函数，选择一个好的损失函数，同样可以让深度学习模型学习更容易，更快速地收敛，达到更高的性能；
 
 最后的最后，如果您在参与`CL-Detection 2023`挑战赛过程中遇到了什么难题，或者在运行此仓库代码遇到了什么错误，亦或者对该基线模型有什么更好的建议，
-也还请不要吝啬地在Issue中提出来哈，我一定积极地解答！
+也还请不要吝啬地在[Issues](https://github.com/szuboy/CL-Detection2023/issues)中提出来哈，我一定积极地解答！

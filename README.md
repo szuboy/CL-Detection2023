@@ -58,6 +58,13 @@ We have tested our code in following environment：
  - `torch` =＝1.12.0
  - `torchvision` == 0.13.0
 
+the repository code does not have any specific library dependencies.
+As long as you have `torch` and `torchvision` installed on your computer,
+you should be able to import them and install other dependencies.
+If you encounter any problems, please feel free to raise them in the [Issues](https://github.com/szuboy/CL-Detection2023/issues).
+I will patiently respond and work towards resolving any issues you encounter.
+
+
 ### Step1: Data Preprocessing
 
 In Step 1, you should run the script `step1_preprocessing.py` in `Python` to perform the processing.

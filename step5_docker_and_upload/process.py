@@ -25,7 +25,7 @@ class Cldetection_alg_2023(DetectionAlgorithm):
 
         print("==> Starting...")
 
-        # 使用对应的GPU
+        # 使用对应的GPU，注意grand-challenge只有一块GPU，请保证下面的权重加载，加上map_location=self.device设置避免不同设备导致的错误
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         # 加载自己的模型和权重文件，这里的权重文件路径是 /opt/algorithm/best_model.pt，
