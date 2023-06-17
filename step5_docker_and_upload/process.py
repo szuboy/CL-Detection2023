@@ -80,7 +80,7 @@ class Cldetection_alg_2023(DetectionAlgorithm):
         return predict_result
 
     def predict(self, *, input_image: SimpleITK.Image):
-        """TODO: 请修改这里的逻辑，执行自己设计的模型预测，要求返回为 pandas 的 DataFrame 格式"""
+        """TODO: 请修改这里的逻辑，执行自己设计的模型预测，返回值可以是任何形式的"""
 
         # 将 SimpleITK.Image 格式转为 Numpy.ndarray 格式进行处理， stacked_image_array 的形状为 (100, 2400, 2880, 3)
         stacked_image_array = SimpleITK.GetArrayFromImage(input_image)

@@ -1,3 +1,4 @@
+<img alt="avatar" src="docs/banner.jpeg"/>
 
 # CL-Detection 2023挑战赛基线模型
 

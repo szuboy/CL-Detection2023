@@ -1,3 +1,5 @@
+<img alt="avatar" src="docs/banner.jpeg"/>
+
 # CL-Detection 2023 Challenge Baseline Model
 
 This repository provides a solution based on heatmap prediction for the CL-Detection 2023 Challenge.
