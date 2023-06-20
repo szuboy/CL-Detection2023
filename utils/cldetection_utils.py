@@ -95,21 +95,23 @@ def visualize_prediction_landmarks(result_dict: dict, save_image_dir: str):
         landmarks, predict_landmarks = landmark_dict['gt'], landmark_dict['predict']
 
         image = sk_io.imread(file_path)
+        image_shape = np.shape(image)[:2]
 
         for i in range(np.shape(landmarks)[0]):
             landmark, predict_landmark = landmarks[i, :], predict_landmarks[i, :]
             # ground truth landmark
             radius = 7
-            rr, cc = sk_draw.disk(center=(int(landmark[1]), int(landmark[0])), radius=radius)
+            rr, cc = sk_draw.disk(center=(int(landmark[1]), int(landmark[0])), radius=radius, shape=image_shape)
             image[rr, cc, :] = [255, 0, 0]
             # model prediction landmark
-            rr, cc = sk_draw.disk(center=(int(predict_landmark[1]), int(predict_landmark[0])), radius=radius)
+            rr, cc = sk_draw.disk(center=(int(predict_landmark[1]), int(predict_landmark[0])), radius=radius, shape=image_shape)
             image[rr, cc, :] = [0, 255, 0]
             # the line between gt landmark and prediction landmark
             line_width = 5
             rr, cc, value = sk_draw.line_aa(int(landmark[1]), int(landmark[0]), int(predict_landmark[1]), int(predict_landmark[0]))
             for offset in range(line_width):
-                image[rr + offset, cc + offset, :] = [255, 255, 0]
+                offset_rr, offset_cc = np.clip(rr + offset, 0, image_shape[0] - 1), np.clip(cc + offset, 0, image_shape[1] - 1)
+                image[offset_rr, offset_cc, :] = [255, 255, 0]
 
         filename = os.path.basename(file_path)
         sk_io.imsave(os.path.join(save_image_dir, filename), image)
