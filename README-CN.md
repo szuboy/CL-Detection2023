@@ -25,7 +25,7 @@
 还请别忘记了把下载好的权重拷贝一份到`step5_docker_and_upload`文件中，给模型预测进行调用。
 
 权重文件下载：[[Google Drive](https://drive.google.com/file/d/1Qvnym4oGSG903ti0z2HE6Dm1udNO692G/view?usp=sharing)]
-[[Baidu Drive](https://pan.baidu.com/s/1CW6I5ZRq99sYaBqABwa8Sw)]
+[[Baidu Drive](https://pan.baidu.com/s/1crjAXmQnz3pEEZpTzfTELA?pwd=94hU)]
 
 
 ## 如何在CL-Detection 2023数据集上运行此代码呢？
@@ -39,7 +39,7 @@
  - step5, 打包上传 `step5_docker_and_upload` 将模型进行封装并上传Grand-Challenge平台 
 
 **您应该提前下载好CL-Detection 2023 数据集格式，可参考挑战赛官网的[详细指导](https://cl-detection2023.grand-challenge.org/)：
-您仅需要发送注册表文件到对应的邮件，拿到数据的可访问链接。放心，我们会快速审核通过的。或者加入官方的QQ交流答疑群：808896849，群主一直在很耐心地帮大家解决问题。**
+您仅需要发送[注册表文件](https://drive.google.com/file/d/1wW9W6rkwJmZz9F3rWCNxK0iECbRSb55q/view?usp=sharing)到对应的邮件，拿到数据的可访问链接。放心，我们会快速审核通过的。或者加入官方的QQ交流答疑群：808896849，群主一直在很耐心地帮大家解决问题。**
 
 
 ### Step0：环境准备

@@ -34,7 +34,7 @@ Please remember to copy the downloaded weights to the `step5_docker_and_upload` 
 
 Weight files download link: 
 [[Google Drive](https://drive.google.com/file/d/1Qvnym4oGSG903ti0z2HE6Dm1udNO692G/view?usp=sharing)]
-[[Baidu Drive](https://pan.baidu.com/s/1CW6I5ZRq99sYaBqABwa8Sw)]
+[[Baidu Drive](https://pan.baidu.com/s/1crjAXmQnz3pEEZpTzfTELA?pwd=94hU)]
 
 
 ## How to run this code on the CL-Detection 2023 dataset or your own custom dataset?
